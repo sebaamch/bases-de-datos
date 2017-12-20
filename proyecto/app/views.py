@@ -105,13 +105,50 @@ def registrarse():
 def rojo():
 	return render_template("layout.html",usuario = "perrito",barras="perrote")
 
+@app.route('/numeroempresas/<mail>')
+def numerodeempresas(mail):
 
-#@app.route('/forms')
-#def pikashu():
-#	variable1= "Seguidores"
-#	return render_template("megazord.html",usuario = "perrito",barras="perrote",variable1=variable1)
+	sql="""SELECT COUNT(*) FROM users, prop_user, propietario, servicios WHERE mail = id_user AND prop_user.rut = propietario.rut AND propietario.rut = rut_user AND mail = '%s%';
+	"""%(mail)
+	cur.execute(sql)
+	numeroempresas = cur.fetchall()
+	print(numeroempresas)
+	return render_template(numeroempresas = numeroempresas)
 
-@app.route('/index')
+@app.route('/numerochequeras/<mail>')
+def numerochequeras(mail):
+
+	sql="""SELECT COUNT(*) FROM users, prop_user, propietario, servicios, pertenecen, chequera WHERE mail = id_user AND prop_user.rut = propietario.rut AND propietario.rut = rut_user AND rut_empresa = rut_serv AND pertenecen.id_chequera = chequera.id_chequera AND mail = '%s%';"""%(mail)
+	cur.execute(sql)
+	numerochequeras = cur.fetchall()
+	print(numerochequeras)
+	return render_template(numerochequeras = numerochequeras)
+
+@app.route('/numerocheques/<mail>')
+def numerodecheques(mail):
+
+	sql="""SELECT COUNT(*) FROM users, prop_user, propietario, servicios, pertenecen, chequera, cheques_chequeras, cheques WHERE mail = id_user AND prop_user.rut = propietario.rut AND propietario.rut = rut_user AND rut_empresa = rut_serv AND pertenecen.id_chequera = chequera.id_chequera AND chequera.id_chequera = cheques_chequeras.id_chequera AND id_cheques = id AND mail = '%s%';
+	"""%(mail)
+	cur.execute(sql)
+	numerocheques = cur.fetchall()
+	print(numerocheques)
+	return render_template(numerocheques = numeroempresas)
+
+@app.route('/empresas/<mail>')
+def empresas(mail):
+	return render_template("megazord.html")
+
+@app.datos('/datos/<mail>')
+def datos(mail):
+	sql="""SELECT * FROM propietario WHERE rut = (SELECT rut)"""
+	return render_template("megazord.html")
+@app.route('/chequeras/<servicio>')
+def chequeras(servicio):
+	return render_template("megazord.html")
+@app.route('/cheques/<chequeras>')
+def cheques(chequeras):
+	return render_template("megazord.html")
+@app.route('/test')
 def index():
-	variable1= "Seguidores"
-	return render_template("megazord.html",usuario = "perrito",barras="perrote",variable1=variable1)
+	return render_template("charts.html")
+
