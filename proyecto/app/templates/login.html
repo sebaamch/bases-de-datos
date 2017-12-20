@@ -56,15 +56,21 @@
                     <div class="form-group">
                       <input id="login-password" type="password" name="loginPassword" required="" class="input-material">
                       <label for="login-password" class="label-material">Password</label>
-                    </div><button type="submit" id="login" class="btn btn-primary">Login</button>
+                    </div><button type="submit" id="login" class="btn btn-primary">Ingresar</button>
                     <!-- This should be submit button but I replaced it with <a> for demo purposes-->
                   </form>
-                  <a onclick="msg() " href="#" class="forgot-pass">¿Olvidaste tu contraseña?</a><br><small>¿No tienes cuenta? </small><a href="registrarse" class="signup">Signup</a>
+                  <a onclick="msg() " href="#" class="forgot-pass">¿Olvidaste tu contraseña?</a><br><small>¿No tienes cuenta? </small><a href="registrarse" class="signup">Registrate</a>
                 </div>
               </div>
             </div>
             {%if alerta == "cuenta inexistente"%}
-            {{alerta}}
+              <div class="alert alert-danger">
+                <strong>{{alerta}}</strong> intente de nuevo.
+              </div>
+            {%elif alerta == "contrasena invalida"%}
+              <div class="alert alert-danger">
+                <strong>{{alerta}}</strong> intente de nuevo.
+              </div>
             {%endif%}
           </div>
         </div>

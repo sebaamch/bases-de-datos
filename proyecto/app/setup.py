@@ -18,21 +18,21 @@ cur.execute(sql)
 
 sql ="""
 CREATE TABLE  prop_user
-				(rut int,id_user varchar(50));
+				(rut varchar(10),id_user varchar(50));
 """
 cur.execute(sql)
 
 
 sql ="""
 CREATE TABLE  servicios
-				(rut_empresa int PRIMARY KEY,rut_user int,nombre_empresa varchar(50),giro varchar(50));
+				(rut_empresa varchar(10) PRIMARY KEY,rut_user varchar(10),nombre_empresa varchar(50),giro varchar(50));
 """
 cur.execute(sql)
 
 
 sql="""
 CREATE TABLE propietario
-				(rut int PRIMARY KEY, nombre1 varchar (41), nombre2 varchar(41), apellido1 varchar(41), apellido2 varchar(41) , direccion varchar(120),ciudad varchar(41),comuna varchar(41));
+				(rut varchar(10) PRIMARY KEY, nombre1 varchar (41), nombre2 varchar(41), apellido1 varchar(41), apellido2 varchar(41) , direccion varchar(120),ciudad varchar(41),comuna varchar(41));
 """
 cur.execute(sql)
 
@@ -44,7 +44,7 @@ cur.execute(sql)
 
 sql ="""
 CREATE TABLE pertenecen
-				(rut_serv int,id_chequera int);
+				(rut_serv varchar(10),id_chequera int);
 """
 cur.execute(sql)
 
@@ -68,7 +68,7 @@ cur.execute(sql)
 
 sql ="""
 CREATE TABLE receptor
-				(rut_recep int,nombre varchar(50));
+				(rut_recep varchar(10),nombre varchar(50));
 """
 cur.execute(sql)
 

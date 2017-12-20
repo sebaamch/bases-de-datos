@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>layout</title>
+    <title>Perrito</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -42,9 +42,9 @@
             <div class="navbar-holder d-flex align-items-center justify-content-between">
               <!-- Navbar Header-->
               <div class="navbar-header">
-                <!-- Navbar Brand --><a href="index.html" class="navbar-brand">
-                  <div class="brand-text brand-big hidden-lg-down"><span>Bootstrap </span><strong>Dashboard</strong></div>
-                  <div class="brand-text brand-small"><strong>BD</strong></div></a>
+                <!-- Navbar Brand --><a href="#" class="navbar-brand">
+                  <div class="brand-text brand-big hidden-lg-down"><span>Perrito </span><strong>Designer</strong></div>
+                  <div class="brand-text brand-small"><strong>PD</strong></div></a>
                 <!-- Toggle Button--><a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
               </div>
               <!-- Navbar Menu -->
@@ -110,13 +110,11 @@
         <nav class="side-navbar">
           <!-- Sidebar Header-->
           <div class="sidebar-header d-flex align-items-center">
-            <div class="avatar"><img src="/static/img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
+            
             <div class="title">
-              <h1 class="h4">{{usuario.nombre}} {{usuario.apellido}}</h1>
-              <p>{{usuario.Crol}}</p>
-            </div>
-          </div>
-          <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
+
+          <!-- Sidebar Navidation Menus-->
+          <span class="heading">Main</span>
           <ul class="list-unstyled">
             <li class="active"> <a href="./"><i class="icon-home"></i>Home</a></li>
             <li><a href="#dashvariants" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Dropdown </a>
@@ -127,19 +125,20 @@
                 <li><a href="#">Page</a></li>
               </ul>
             </li>
-            <li> <a href="index.html"> <i class="icon-grid"></i>Tables </a></li>
+            <li> <a href="#"> <i class="icon-grid"></i>Tables </a></li>
             <li> <a href="charts.html"> <i class="fa fa-bar-chart"></i>Charts </a></li>
             <li> <a href="cosa"> <i class="icon-padnote"></i>Forms </a></li>
             <li> <a href="perrito"> <i class="icon-interface-windows"></i>Registrarse</a></li>
           </ul><span class="heading">Extras</span>
           <ul class="list-unstyled">
-            <li> <a href="/index"> <i class="icon-flask"></i>Index </a></li>
+            <li> <a href="#"> <i class="icon-flask"></i>poi </a></li>
             <li> <a href="/digimon"> <i class="icon-screen"></i>Digimon </a></li>
             <li> <a href="/mi_primer_formulario"> <i class="icon-mail"></i>Formulario </a></li>
             <li> <a href="/perrito"> <i class="icon-picture"></i>cosita por romper </a></li>
           </ul>
         </nav>
-     {% block body %}{% endblock %}
+
+     {% block body %} {% endblock %}
      
       </div>
     </div>
