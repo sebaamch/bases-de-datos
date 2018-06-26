@@ -21,7 +21,7 @@
                         <div role="progressbar" style="width: 25%; height: 4px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-violet"></div>
                       </div>
                     </div>
-                    <div class="number"><strong>25<!--aquí va la referencia {{numeroempresas}}--></strong></div>
+                    <div class="number"><strong>{{numeroempresas}}<!--aquí va la referencia {{numeroempresas}}--></strong></div>
                   </div>
                 </div>
                 <!-- Item -->
@@ -33,7 +33,7 @@
                         <div role="progressbar" style="width: 25%; height: 4px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-red"></div>
                       </div>
                     </div>
-                    <div class="number"><strong>70<!--aquí va la referencia {{numerochequeras}}--></strong></div>
+                    <div action = "numerochequeras/{{mail}}" class="number"><strong> {{numerochequeras}}<!--aquí va la referencia {{numerochequeras}}--></strong></div>
                   </div>
                 </div>
                 <!-- Item -->
@@ -45,7 +45,7 @@
                         <div role="progressbar" style="width: 25%; height: 4px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-green"></div>
                       </div>
                     </div>
-                    <div class="number"><strong>44<!--aquí va la referencia {{numerocheques}}--></strong></div>
+                    <div class="number"><strong>{{numerocheques}}<!--aquí va la referencia {{numerocheques}}--></strong></div>
                   </div>
                 </div>
                 <!-- Item -->
@@ -96,7 +96,7 @@
             <div class="container-fluid">
               <!-- Project-->
 
-              {%for barra in barras%} 
+              {%for holi in mail%} 
               <div class="project">
                 <div class="row bg-white has-shadow">
                   <div class="left-col col-lg-6 d-flex align-items-center justify-content-between">

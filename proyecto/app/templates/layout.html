@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Perrito</title>
+    <title>Count Designer</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -42,9 +42,9 @@
             <div class="navbar-holder d-flex align-items-center justify-content-between">
               <!-- Navbar Header-->
               <div class="navbar-header">
-                <!-- Navbar Brand --><a href="#" class="navbar-brand">
-                  <div class="brand-text brand-big hidden-lg-down"><span>Perrito </span><strong>Designer</strong></div>
-                  <div class="brand-text brand-small"><strong>PD</strong></div></a>
+                <!-- Navbar Brand --><a href="/numeroempresas/{{mail}}" class="navbar-brand">
+                  <div class="brand-text brand-big hidden-lg-down"><span>Count </span><strong>Designer</strong></div>
+                  <div class="brand-text brand-small"><strong>CD</strong></div></a>
                 <!-- Toggle Button--><a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
               </div>
               <!-- Navbar Menu -->
@@ -70,20 +70,20 @@
           <!-- Sidebar Navidation Menus-->
           <span class="heading">Main</span>
           <ul class="list-unstyled">
-            <li class="active"> <a href="index"><i class="icon-home"></i>Home</a></li>
-            <li><a href="#dashvariants" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Empresas </a>
+            <li class="active"> <a href="#"><i class="icon-home"></i>Home</a></li>
+            <li><a href="#dashvariants" action="/empresas{{mail}}"aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Empresas </a>
               <ul id="dashvariants" class="collapse list-unstyled">
 
             <!--intento crear un menu de empresas-->
               {%for holi in empresas%}
-                <li><a href="empresas/{{empresas[x]}}">{{empresas[holi][2]}}/a></li>
+                <li><a href=/"empresas/{{mail}}">{{empresas[holi][2]}}/a></li>
               {%endfor%}
               </ul>
             </li>
-            <li> <a href="#"> <i class="icon-grid"></i>Tables </a></li>
+            <!--<li> <a href="#"> <i class="icon-grid"></i>Tables </a></li>
             <li> <a href="charts.html"> <i class="fa fa-bar-chart"></i>Charts </a></li>
             <li> <a href="cosa"> <i class="icon-padnote"></i>Forms </a></li>
-            <li> <a href="perrito"> <i class="icon-interface-windows"></i>Registrarse</a></li>
+            <li> <a href="perrito"> <i class="icon-interface-windows"></i>Registrarse</a></li>-->
           </ul><span class="heading">Extras</span>
           <ul class="list-unstyled">
             <li> <a href="actualizar/{{email}}"> <i class="icon-interface-windows"></i>Actualizacion de datos</a></li>

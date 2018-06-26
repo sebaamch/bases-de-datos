@@ -40,7 +40,7 @@
                   <div class="logo">
                     <h1>Ingrese a su cuenta</h1>
                   </div>
-                  <p>Controla tus cuentas fácil y rápido.</p>
+                  <p>Gestiona tu restaurant, rápido, fácil y confiable.</p>
                 </div>
               </div>
             </div>
@@ -50,8 +50,8 @@
                 <div class="content">
                   <form id="login-form" method="post" action="login">
                     <div class="form-group">
-                      <input id="login-mail" type="mail" name="loginmail" required="" class="input-material">
-                      <label for="login-mail" class="label-material">Correo Electrónico</label>
+                      <input type="text" id="register-rut" name="loginrut" class ="input-material" required oninput="checkRut(this)">
+                      <label for="register-rut" class="label-material">Rut </label>
                     </div>
                     <div class="form-group">
                       <input id="login-password" type="password" name="loginPassword" required="" class="input-material">
@@ -59,7 +59,7 @@
                     </div><button type="submit" id="login" class="btn btn-primary">Ingresar</button>
                     <!-- This should be submit button but I replaced it with <a> for demo purposes-->
                   </form>
-                  <a onclick="msg() " href="#" class="forgot-pass">¿Olvidaste tu contraseña?</a><br><small>¿No tienes cuenta? </small><a href="registrarse" class="signup">Registrate</a>
+                  <a onclick="msg() " href="#" class="forgot-pass">¿Olvidaste tu contraseña?</a><br><small>¿Eres un empleado nuevo? </small><a href="registrarse" class="signup">Registrate</a>
                 </div>
               </div>
             </div>

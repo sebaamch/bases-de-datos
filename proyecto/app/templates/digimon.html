@@ -1,6 +1,5 @@
-
 {% extends "layout.html" %}
-{% block body %}     
+{% block body %}
      <div class="content-inner">
           <!-- Page Header-->
           <header class="page-header">
@@ -108,7 +107,7 @@
             <div class="container-fluid">
               <!-- Project-->
 
-              {%for barra in barras%} 
+              {%for barra in barras%}
               <div class="project">
                 <div class="row bg-white has-shadow">
                   <div class="left-col col-lg-6 d-flex align-items-center justify-content-between">
@@ -133,7 +132,7 @@
               </div>
 
               {%endfor%}
-        
+
             </div>
           </section>
           <!-- Client Section-->
@@ -261,7 +260,7 @@
                         <div aria-labelledby="closeCard" class="dropdown-menu has-shadow"><a href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a></div>
                       </div>
                     </div>
-                    <div class="card-header d-flex align-items-center">           
+                    <div class="card-header d-flex align-items-center">
                       <h2 class="h3">To Do List </h2>
                     </div>
                     <div class="card-body no-padding">
@@ -372,7 +371,7 @@
                 </div>
                 <!-- Daily Feeds -->
                 <div class="col-lg-4">
-                  <div class="daily-feeds card"> 
+                  <div class="daily-feeds card">
                     <div class="card-close">
                       <div class="dropdown">
                         <button type="button" id="closeCard" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
@@ -396,7 +395,7 @@
                         </div>
                       </div>
                       <!-- Item-->
-                      <div class="item"> 
+                      <div class="item">
                         <div class="feed d-flex justify-content-between">
                           <div class="feed-body d-flex justify-content-between"><a href="#" class="feed-profile"><img src="/static/img/avatar-2.jpg" alt="person" class="img-fluid rounded-circle"></a>
                             <div class="content">
@@ -494,6 +493,6 @@
               </div>
             </div>
           </footer>
-        </div> 
+        </div>
 
-        {% endblock %}
+{% endblock %}
